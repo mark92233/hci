@@ -21,12 +21,16 @@ function filterByCollege() {
 
   cards.forEach(card => {
     const college = card.getAttribute('data-college') || '';
-    if (!selectedCollege || college.includes(selectedCollege)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = !selectedCollege || college.includes(selectedCollege) ? 'block' : 'none';
   });
+}
+
+function toggleHeart(button) {
+  button.classList.toggle('saved');
+}
+
+function clickAction(type, username) {
+  alert(`You clicked to ${type} @${username}!`);
 }
 
 function generateCards(sectionId, count, type) {
@@ -43,15 +47,20 @@ function generateCards(sectionId, count, type) {
     const randomCollege = colleges[Math.floor(Math.random() * colleges.length)];
     container.innerHTML += `
       <div class="card" data-college="${randomCollege}">
+        <button class="heart-btn" onclick="toggleHeart(this)">&#9825;</button>
         <div class="card-header">
           <img src="profile-placeholder.jpg" alt="User" class="user-img">
-          <span class="username">@student${i}</span>
+          <span class="username">student${i}</span>
+          <span class="tag">Entry-Level</span>
+          <span class="tag">Full-Time</span>
         </div>
-        <img src="product-placeholder.jpg" alt="Post Image" class="post-img">
+        <img src="product-placeholder.jpg" alt="Post" class="post-img">
         <div class="card-body">
           <h3>${type} Title ${i}</h3>
-          <p>(${randomCollege}) - This is a description of ${type.toLowerCase()} ${i}.</p>
-          <button>${type === 'Product' ? 'Buy Now' : 'Contact'}</button>
+          <p>(${randomCollege}) - A description of ${type.toLowerCase()} ${i}.</p>
+          <button onclick="clickAction('${type === 'Product' ? 'Buy' : 'Contact'}', 'student${i}')">
+            ${type === 'Product' ? 'Buy Now' : 'Contact'}
+          </button>
         </div>
       </div>
     `;

@@ -23,61 +23,62 @@
     <button onclick="searchContent()">Search</button>
   </header>
 
-  <aside class="filters">
-    <h3>Filter by:</h3>
-    <label><input type="checkbox" id="filterFullTime"> Full-Time</label>
-    <label><input type="checkbox" id="filterPartTime"> Part-Time</label>
-    <label><input type="checkbox" id="filterInternship"> Internship</label>
-    <label><input type="checkbox" id="filterProjectWork"> Project Work</label>
+  <div class="main-container">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <label><input type="checkbox" id="filterFullTime"> Full-Time</label>
+      <label><input type="checkbox" id="filterPartTime"> Part-Time</label>
+      <label><input type="checkbox" id="filterInternship"> Internship</label>
+      <label><input type="checkbox" id="filterProjectWork"> Project Work</label>
+      <div class="filter">
+        <label for="collegeFilter">Filter by College:</label>
+        <select id="collegeFilter" onchange="filterByCollege()">
+          <option value="">All Colleges</option>
+          <option value="computing studies">College of Computing Studies</option>
+          <option value="liberal arts">College of Liberal Arts</option>
+          <option value="engineering">College of Engineering</option>
+          <option value="architecture">College of Architecture</option>
+          <option value="public administration">College of Public Administration</option>
+          <option value="teacher education">College of Teacher Education</option>
+          <option value="home economics">College of Home Economics</option>
+          <option value="nursing">College of Nursing</option>
+          <option value="law">College of Law</option>
+          <option value="criminal justice">College of Criminal Justice Education</option>
+          <option value="medicine">College of Medicine</option>
+          <option value="asian islamic studies">College of Asian Islamic Studies</option>
+          <option value="social work">College of Social Work and Development</option>
+          <option value="sports science">College of Sports Science and Physical Education</option>
+          <option value="science and mathematics">College of Science and Mathematics</option>
+        </select>
+      </div>
+    </aside>
 
-    <div class="filter">
-      <label for="collegeFilter">Filter by College: </label>
-      <select id="collegeFilter" onchange="filterByCollege()">
-        <option value="">All College</option>
-        <option value="computing studies">College of Computing Studies</option>
-        <option value="liberal arts">College of Liberal Arts</option>
-        <option value="engineering">College of Engineering</option>
-        <option value="architecture">College of Architecture</option>
-        <option value="public administration">College of Public Administration</option>
-        <option value="teacher education">College of Teacher Education</option>
-        <option value="home economics">College of Home Economics</option>
-        <option value="nursing">College of Nursing</option>
-        <option value="law">College of Law</option>
-        <option value="criminal justice">College of Criminal Justice Education</option>
-        <option value="medicine">College of Medicine</option>
-        <option value="asian islamic studies">College of Asian Islamic Studies</option>
-        <option value="social work">College of Social Work and Development</option>
-        <option value="sports science">College of Sports Science and Physical Education</option>
-        <option value="science and mathematics">College of Science and Mathematics</option>
-      </select>
-    </div>
-  </aside>
+    <main id="main-content">
+      <section id="find-job" class="content-section">
+        <h2>Recommended Jobs</h2>
+        <div class="card-grid"></div>
+      </section>
 
-  <main id="main-content">
-    <section id="find-job" class="content-section">
-      <h2>Find a Job</h2>
-      <div class="card-grid"></div>
-    </section>
+      <section id="look-client" class="content-section" style="display:none">
+        <h2>Find Clients</h2>
+        <div class="card-grid"></div>
+      </section>
 
-    <section id="look-client" class="content-section" style="display:none">
-      <h2>Look for Clients</h2>
-      <div class="card-grid"></div>
-    </section>
+      <section id="offer-job" class="content-section" style="display:none">
+        <h2>Offer a Job</h2>
+        <form class="upload-form">
+          <input type="text" placeholder="Job Title" required>
+          <textarea placeholder="Job Description" required></textarea>
+          <button type="submit">Post Job</button>
+        </form>
+      </section>
 
-    <section id="offer-job" class="content-section" style="display:none">
-      <h2>Offer a Job</h2>
-      <form class="upload-form">
-        <input type="text" placeholder="Job Title" required>
-        <textarea placeholder="Job Description" required></textarea>
-        <button type="submit">Post Job</button>
-      </form>
-    </section>
-
-    <section id="marketplace" class="content-section" style="display:none">
-      <h2>Marketplace</h2>
-      <div class="card-grid"></div>
-    </section>
-  </main>
+      <section id="marketplace" class="content-section" style="display:none">
+        <h2>Marketplace</h2>
+        <div class="card-grid"></div>
+      </section>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
