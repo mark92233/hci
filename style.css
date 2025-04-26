@@ -94,6 +94,14 @@ body {
   margin: 0.5rem 0;
 }
 
+.filter select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--light-red);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
 main {
   padding: 1rem 2rem;
 }
