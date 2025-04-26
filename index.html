@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Sidehustle Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SideHustle</div>
+    <ul class="nav-links">
+      <li><button onclick="showSection('find-job')">Find Job</button></li>
+      <li><button onclick="showSection('look-client')">Look for Client</button></li>
+      <li><button onclick="showSection('offer-job')">Offer Job</button></li>
+      <li><button onclick="showSection('marketplace')">Marketplace</button></li>
+    </ul>
+  </nav>
+
+  <header class="search-header">
+    <input type="text" id="searchInput" placeholder="Search jobs or products...">
+    <button onclick="searchContent()">Search</button>
+  </header>
+
+  <aside class="filters">
+    <h3>Filter by:</h3>
+    <label><input type="checkbox" id="filterFullTime"> Full-Time</label>
+    <label><input type="checkbox" id="filterPartTime"> Part-Time</label>
+    <label><input type="checkbox" id="filterInternship"> Internship</label>
+    <label><input type="checkbox" id="filterProjectWork"> Project Work</label>
+  </aside>
+
+  <main id="main-content">
+    <!-- Sections will show here -->
+
+    <section id="find-job" class="content-section">
+      <h2>Find a Job</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Graphic Designer</h3>
+          <p>Help me design my thesis poster!</p>
+          <button>Contact Client</button>
+        </div>
+        <div class="card">
+          <h3>Math Tutor Needed</h3>
+          <p>Assist with Algebra homework (High pay!)</p>
+          <button>Contact Client</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="look-client" class="content-section" style="display:none">
+      <h2>Look for Clients</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Logo Designer Available</h3>
+          <p>Offering quality designs for small businesses!</p>
+          <button>Hire Me</button>
+        </div>
+        <div class="card">
+          <h3>Programming Tutor Available</h3>
+          <p>Java and C++ sessions for beginners.</p>
+          <button>Hire Me</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer-job" class="content-section" style="display:none">
+      <h2>Offer a Job</h2>
+      <form class="upload-form">
+        <input type="text" placeholder="Job Title">
+        <textarea placeholder="Job Description"></textarea>
+        <button type="submit">Post Job</button>
+      </form>
+    </section>
+
+    <section id="marketplace" class="content-section" style="display:none">
+      <h2>Marketplace</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Handmade Notebook</h3>
+          <p>Price: $10</p>
+          <p>Eco-friendly, cute design, perfect for school notes.</p>
+          <button>Buy Now</button>
+        </div>
+        <div class="card">
+          <h3>Personalized Keychains</h3>
+          <p>Price: $5</p>
+          <p>Customize your own keychain. Perfect gifts!</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
