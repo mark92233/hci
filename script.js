@@ -49,7 +49,7 @@ function generateCards(sectionId, count, type) {
       <div class="card" data-college="${randomCollege}">
         <button class="heart-btn" onclick="toggleHeart(this)">&#9825;</button>
         <div class="card-header">
-          <img src="profile-placeholder.jpg" alt="User" class="user-img">
+          <img src="pro.png" alt="User" class="user-img">
           <span class="username">student${i}</span>
           <span class="tag">Entry-Level</span>
           <span class="tag">Full-Time</span>
