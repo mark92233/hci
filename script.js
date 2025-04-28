@@ -49,7 +49,7 @@ function generateCards(sectionId, count, type) {
       <div class="card" data-college="${randomCollege}">
         <button class="heart-btn" onclick="toggleHeart(this)">&#9825;</button>
         <div class="card-header">
-          <img src="images/pro.png" alt="User" class="user-img">
+          <img src="pro.png" alt="User" class="user-img">
           <span class="username">student${i}</span>
           <span class="tag">Entry-Level</span>
           <span class="tag">Full-Time</span>
@@ -68,7 +68,7 @@ function generateCards(sectionId, count, type) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  generateCards('find-job', 10, 'Job');
-  generateCards('look-client', 10, 'Service');
-  generateCards('marketplace', 10, 'Product');
+  generateCards('find-job', 50, 'Job');
+  generateCards('look-client', 50, 'Service');
+  generateCards('marketplace', 60, 'Product');
 });
